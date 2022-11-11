@@ -1,0 +1,116 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    90deg,
+    rgb(167, 238, 250),
+    rgb(171, 255, 160)
+  );
+
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.home {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 30px 50px;
+}
+
+.fa-home {
+  font-size: 50px;
+  border: none;
+  color: white;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  border: none;
+  font-size: 2rem;
+  background-color: #fff;
+}
+
+form button:hover {
+  background-color: aqua;
+  color: #fff;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5vh;
+  background-color: #fff;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.complete-btn {
+  background-color: #5cff8a;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 668px) {
+  .home {
+    position: relative;
+    padding: 20px;
+    margin: 0 10px;
+  }
+}
