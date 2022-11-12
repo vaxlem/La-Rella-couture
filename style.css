@@ -6,7 +6,8 @@
   
   a {
     text-decoration: none;
-    color: white;
+    color: rgb(100, 4, 4);
+    font-display: auto;
   }
   
   nav {
