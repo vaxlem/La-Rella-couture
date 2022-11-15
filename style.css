@@ -44,7 +44,7 @@
   .nav-links {
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 90%;
   }
   
   .nav-links li {
@@ -55,8 +55,9 @@
     color: rgba(247, 234, 50, 0.996);
     text-decoration: none;
     letter-spacing: 3px;
-    font-weight: bold;
+    font-weight:bold;
     font-style: 14px;
+    font-size: xx-large;
   }
   
   .burger div {
