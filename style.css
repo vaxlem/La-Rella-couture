@@ -52,12 +52,16 @@
   }
   
   .nav-links a {
-    color: rgba(247, 234, 50, 0.996);
+    color: gold;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight:bold;
-    font-style: 14px;
-    font-size: xx-large;
+    font-style: 10px;
+    font-size: x-large;
+    border-radius: 5%;
+    border-style: solid;
+    border-color: white;
+    
   }
   
   .burger div {
@@ -360,15 +364,4 @@
 
   }
 
-
-
-
-
-
-
-
-
-
-
-  
   
