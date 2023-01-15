@@ -1,367 +1,185 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
-  
-  a {
-    text-decoration: none;
-    color: rgb(100, 4, 4);
-    font-display: auto;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: rgb(0, 0, 0);
-    font-family: "Poppins", sans-serif;
-  }
-  
-  .logo {
-    color: rgb(226, 226, 226);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-    display: flex;
-    margin-bottom: 10px;
-  }
-  
-  #logo-text {
-    color: white;
-    letter-spacing: 10px;
-    font-size: 40px;
-    text-transform: uppercase;
-    margin: 20px 0px 0px 20px;
-  }
-  
-  #nav-logo {
-    width: 90px;
-    height: 60px;
-  }
-  
-  .nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-  }
-  
-  .nav-links li {
-    list-style-type: none;
-  }
-  
-  .nav-links a {
-    color: gold;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight:bold;
-    font-style: 10px;
-    font-size: x-large;
-    border-radius: 5%;
-    border-style: solid;
-    border-color: white;
-    
-  }
-  
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: rgb(226, 226, 226);
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  
-  .burger {
-    display: none;
-    cursor: pointer;
-  }
-  
-  /* TABLET */
-  @media screen and (max-width: 1536px) {
-    .nav-links {
-      width: 75%;
-      margin-left: 10px;
-    }
-  }
-  
-  /* MOBILE */
-  @media screen and (max-width: 768px) {
-    /* body {
-      display: none;
-    } */
-  
-    body {
-      overflow-x: hidden;
-    }
-  
-    /* WHAT SHOULD HAPPEN TO THE NAV-LINKS WHEN WE GET TO MOBILE */
-    .nav-links {
-      position: absolute;
-      right: 0px;
-      height: 90vh;
-      top: 8vh;
-      background-color: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 50%;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in;
-    }
-    /* i want the nav bar lists not to show, so that when we click on the burger icon it slowly fades in */
-    .nav-links li {
-      opacity: 0;
-    }
-  
-    .burger {
-      display: block;
-    }
-  
-    .intro {
-      margin-bottom: 40px;
-    }
-  
-    button {
-      margin-top: 50px;
-    }
-  
-    .about-text-box {
-      max-width: 700px;
-      min-width: 100px;
-    }
-  
-    .cards {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .cards li img {
-      width: 500px;
-      height: 300px;
-    }
-  
-    .intro img {
-      display: none;
-    }
-  
-    .image-box img {
-      display: none;
-    }
-  
-    .about-card {
-      width: 200px;
-      padding: 0px;
-    }
-  
-    .Ast1 {
-      margin: auto;
-      margin: 30px 150px 30px 150px;
-      background-color: black;
-      color: white;
-    }
-  }
-  /* add image as logo */
-  #nav-logo {
-    /* float: left; */
-    width: 70px;
-    height: 70px;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
-  
-  .nav-active {
-    transform: translateX(0%);
-  }
-  
-  /* now what we have to do is to animate the list into the humburger menu
-  ...so lets build an animation
-  */
-  
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-  
-  /* this is the last code to add. After all is said and done */
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  
-  .toggle .line2 {
-    opacity: 0;
-  }
-  
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-  
-  /* this is for the main content */
-  .content {
-    margin: 0px;
-  }
-  .intro {
-    background-image: url(./images/BG.png);
-    background-color: grey;
-    background-size: cover;
-    height: 700px;
-    padding: 0px 0px 0px 20px;
-  }
-  
-  .intro img {
-    width: 470px;
-    height: 580px;
-    position: absolute;
-    left: 50%;
-    padding-top: 100px;
-  }
-  
-  .intro div {
-    position: absolute;
-    top: 35%;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-  }
-  
-  .text {
-    font-size: 50px;
-    font-weight: bold;
-    margin-left: 40px;
-  }
-  
-  .hello {
-    font-weight: lighter;
-    font-style: italic;
-  }
-  
-  .title {
-    font-size: 35px;
-    font-weight: lighter;
-  }
-  
-  button {
-    width: 150px;
-    height: 55px;
-    border-radius: 18px;
-    border: 0px;
-  }
-  
-  .btn-project {
-    background-color: rgb(204, 204, 204);
-    padding: 0%;
-  }
-  
-  .btn-project a {
-    color: black;
-    font-size: 20px;
-    position: relative;
-  }
-  
-  .btn-contact {
-    background-color: rgb(144, 177, 248);
-    padding: 0%;
-    margin-left: 10%;
-  }
-  
-  .btn-contact a {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    position: relative;
-  }
-  
-  button:hover {
-    background-color: rgb(192, 230, 240);
-    /* transform: scale(1.5); */
-    transition: transform 0.5s ease-in;
-  }
-  
-  .about {
-    background-color: #ededed;
-    padding: 10px;
-  }
-  .about-card {
-    background-color: #fff;
-    padding: 20px;
-    margin: 40px;
-    border-radius: 10px;
-    display: flex;
-    min-width: 700px;
-  }
-  
-  .image-box img {
-    width: 350px;
-    height: 270px;
-  }
-  
-  .about-text-box {
-    margin: 10px;
-    padding: 0px 40px 0px 40px;
-  }
-  .about-text-box h3 {
-    text-transform: uppercase;
-  }
-  .about-text-box h4 {
-    font-weight: lighter;
-  }
-  
-  .projects div {
-    margin: 20px;
-  }
-  
-  .projects h3 {
-    text-transform: uppercase;
-  }
-  /* this is for the project cards */
-  .cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px;
-    list-style: none;
-  }
-  .cards li {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .cards li img {
-    width: 290px;
-    height: 250px;
-    margin: 10px;
-    transition: 2s;
-  }
-  
-  .cards li:hover img {
-    transform: scale(1.5);
-  }
-  .cards li:hover h4 {
-    margin-top: 50px;
-  }
-  
-  .cards li h4 {
-    text-transform: uppercase;
-  }
-  
-  .card-content {
-    margin: 20px;
-  }
-  .sela-image {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 35px !important;
+  color: blue !important;
+}
+
+.nav-link {
+  font-size: 16px;
+  margin: 15px;
+  color: black;
+}
+
+.active.nav-link {
+  color: rgb(5, 73, 73) !important;
+}
+
+.nav-link:hover {
+  color: #d6a332 !important;
+}
+
+.menu-right-btn {
+  padding: 13px 40px;
+  margin-right: 4%;
+  background-color: transparent;
+  transition: all 300ms ease-in;
+}
+
+.menu-right-btn:hover {
+  color: white;
+  background-color: green;
+}
+
+.site-content {
+  background-image: url(./images/la\ re.jpg);
+  background-attachment: fixed;
+  background-size:50%;
+
+}
+
+.site-title,
+.site-desc {
+  color: rgba(255, 255, 255, 0.651);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.site-title {
+  margin-top: 30%;
+  margin-bottom: 6%;
+  font-style: 50px;
+}
+
+.d-flex {
+  margin-bottom: 50px;
+}
+
+.here-there {
+  background-image: url(./images/la\ rella.jpeg);
+  background-attachment: fixed;
+  background-size: 75%;
+}
+
+.site-desc {
+  font-size: 28px;
+  /* padding-left: 25%; */
+}
+
+.site-btn1 {
+  margin-left: 20%;
+}
+
+.site-btn1,
+.site-btn2 {
+  margin: 5% 0 40% 0;
+}
+
+.section-1.heading-1 {
+  margin-top: 8%;
+}
+
+.section-1.heading-2 {
+  margin-bottom: 45%;
+}
+
+.section-1.para-1 {
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 15%;
+}
+
+.section-1.card-text,
+.para-1 {
+  color: rgb(79, 90, 92);
+}
+
+.section-1 {
+  margin-bottom: 8%;
+}
+.card {
+  width: 20rem;
+}
+
+/* .card img {
+  width: 318px;
+  height: 318px;
+} */
+
+.section-2 .heading-1 {
+  margin-top: 20%;
+  margin-bottom: 4%;
+  font-family: monospace;
+  width: 80%;
+  color: white;
+}
+
+.section-2 .para {
+  width: 80%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  margin-bottom: 7%;
+}
+
+.section-2 .btn {
+  margin-bottom: 15%;
+  width: 30%;
+  padding: 2% 5%;
+}
+
+.section-3 p {
+  color: rgb(46, 51, 53);
+}
+
+.section-4 {
+  margin-top: 8%;
+}
+
+.section-4 .row .col-md-7,
+.col-md-5 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.section-4 a {
+  color: rgb(15, 223, 102);
+  font-size: 20px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-4 .para-1 {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 7%;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    /* display: none; */
   }
 
+  main {
+    width: 100%;
   }
 
-  
+  .site-btn1,
+  .site-btn2 {
+    margin: 5% 0 05% 0;
+  }
+
+  .sec-4-img {
+    width: 100% !important;
+  }
+}
