@@ -91,9 +91,9 @@
       display: none;
     } */
   
-    body {
-      overflow-x: hidden;
-    }
+    /* body {
+      overflow-x overflow-y: hidden;
+    } */
   
     /* WHAT SHOULD HAPPEN TO THE NAV-LINKS WHEN WE GET TO MOBILE */
     .nav-links {
@@ -109,6 +109,7 @@
       transform: translateX(100%);
       transition: transform 0.5s ease-in;
     }
+
     /* i want the nav bar lists not to show, so that when we click on the burger icon it slowly fades in */
     .nav-links li {
       opacity: 0;
@@ -161,6 +162,7 @@
       background-color: black;
       color: white;
     }
+    
   }
   /* add image as logo */
   #nav-logo {
